@@ -1,21 +1,104 @@
-.cabecalho__menu-hamburguer{
-    width: 24px;
-    height: 24px;
-    background-image: url("../img/Menu.svg.png");
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--branco);
+    position: relative;
+    align-items: center;
+
+}
+
+.cabecalho__menu {
+    display: inline-block;
+    background-image: url("../img/Menu.svg");
     background-repeat: no-repeat;
     background-position: center;
-    display: inline-block;
+    width: 24px;
+    height: 24px;
 }
-.cabecalho {
-    background-color: var(--branco);
+
+.conteiner{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.container{
-    display: flex;
-    align-items: center;
-}
-.container__imagem {
+
+.conteiner__imagem{
     padding: 1em;
+}
+.lista__menu{
+display: none;
+background-color: var(--branco);
+position: absolute;
+top:100%;
+width: 60vw;
+}
+.lista__menu-item{
+
+    padding:1em;
+}
+.lista__menu-link{
+ color: var(--roxo);
+ text-transform: uppercase;
+ text-decoration: none;
+}
+.lista__menu-titulo{
+    color: var(--amarelo);
+    font-weight: 700;
+}
+.conteiner__botao:checked~.lista__menu{
+    display: block;
+}
+
+.conteiner__botao{
+    display: none;
+}
+.conteiner__titulo{
+    display: none;
+}
+
+.opcoes{
+    display: none;
+}
+
+@media screen and (min-width:1024px) {
+
+    .conteiner__titulo{
+        display: block;
+        font-family: var(--fonte-secundaria);
+        font-weight: 400;
+        font-size: 30px;
+    } 
+    
+    .conteiner__titulo--negrito{
+        font-weight: 700;
+    }
+    .cabecalho__menu{
+        display: none;
+    }
+
+    .conteiner__favorito{
+        display: none;
+    }
+
+    .opcoes{
+        display: flex;
+    }
+
+    .opcoes__item{
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .opcoes__link{
+        text-decoration: none;
+        color:var(--preto)
+    }
+    .opcao__botao:checked.lista__menu{
+        display: block;
+        width: auto;
+    }
+    .opcoes__botao{
+        display: none;
+    }
+    
 }
