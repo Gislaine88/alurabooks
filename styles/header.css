@@ -37,7 +37,7 @@ width: 60vw;
     padding:1em;
 }
 .lista__menu-link{
- color: var(--roxo);
+ color: var(--azul-degrade);
  text-transform: uppercase;
  text-decoration: none;
 }
